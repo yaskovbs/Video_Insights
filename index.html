@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VideoInsights - Automatic Video Analysis</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="logo">
+                <div class="play-icon"></div>
+                <h1>VideoInsights</h1>
+            </div>
+            <p class="tagline">Automatic Video Analysis Powered by AI</p>
+            <div class="theme-toggle">
+                <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle dark mode">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="input-section">
+            <h2>Analyze Your Video</h2>
+            
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="youtube">YouTube URL</button>
+                <button class="tab-btn" data-tab="upload">Upload Video</button>
+            </div>
+            
+            <div class="tab-content active" id="youtube-tab">
+                <form id="youtube-form">
+                    <div class="input-group">
+                        <label for="youtube-url">YouTube URL:</label>
+                        <input type="url" id="youtube-url" placeholder="https://www.youtube.com/watch?v=..." required>
+                    </div>
+                    <button type="submit" class="primary-btn">Analyze</button>
+                </form>
+            </div>
+            
+            <div class="tab-content" id="upload-tab">
+                <form id="upload-form">
+                    <div class="input-group">
+                        <label for="video-file">Upload Video File:</label>
+                        <input type="file" id="video-file" accept="video/*" required>
+                        <div class="file-info">
+                            <p>Supported formats: MP4, MOV, AVI, etc.</p>
+                            <p>Maximum size: 90 minutes (Google AI Studio limit)</p>
+                        </div>
+                    </div>
+                    <button type="submit" class="primary-btn">Analyze</button>
+                </form>
+            </div>
+            
+            <div class="api-key-section">
+                <div class="input-group">
+                    <label for="api-key">Google AI Studio API Key:</label>
+                    <div class="api-key-input">
+                        <input type="password" id="api-key" placeholder="Enter your API key...">
+                        <button id="toggle-password" type="button"><i class="fas fa-eye"></i></button>
+                    </div>
+                    <p class="api-info">Your API key is stored locally and used only for Google AI Studio requests.</p>
+                    <button id="save-api-key" class="secondary-btn">Save API Key</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="loading-section" style="display: none;">
+            <div class="loader"></div>
+            <p>Analyzing video content... This may take a few minutes.</p>
+        </section>
+
+        <section class="results-section" style="display: none;">
+            <h2>Analysis Results</h2>
+            
+            <div class="result-card" id="title-card">
+                <div class="card-header">
+                    <h3>Suggested Title</h3>
+                    <button class="copy-btn" data-target="title-content"><i class="fas fa-copy"></i></button>
+                </div>
+                <div class="card-content" id="title-content">
+                    <!-- Title will be inserted here -->
+                </div>
+            </div>
+            
+            <div class="result-card" id="response-card">
+                <div class="card-header">
+                    <h3>Text Response & Summary</h3>
+                    <button class="copy-btn" data-target="response-content"><i class="fas fa-copy"></i></button>
+                </div>
+                <div class="card-content" id="response-content">
+                    <!-- Response text will be inserted here -->
+                </div>
+            </div>
+            
+            <div class="result-card" id="description-card">
+                <div class="card-header">
+                    <h3>Detailed Description</h3>
+                    <button class="copy-btn" data-target="description-content"><i class="fas fa-copy"></i></button>
+                </div>
+                <div class="card-content" id="description-content">
+                    <!-- Description will be inserted here -->
+                </div>
+            </div>
+            
+            <div class="result-card" id="tags-card">
+                <div class="card-header">
+                    <h3>Hashtags & Tags</h3>
+                    <button class="copy-btn" data-target="tags-content"><i class="fas fa-copy"></i></button>
+                </div>
+                <div class="card-content" id="tags-content">
+                    <div class="tags-container">
+                        <!-- Tags will be inserted here -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="result-card" id="chapters-card">
+                <div class="card-header">
+                    <h3>Chapters with Timestamps</h3>
+                    <button class="copy-btn" data-target="chapters-content"><i class="fas fa-copy"></i></button>
+                </div>
+                <div class="card-content" id="chapters-content">
+                    <ul class="chapters-list">
+                        <!-- Chapters will be inserted here -->
+                    </ul>
+                </div>
+            </div>
+
+            <button id="new-analysis" class="primary-btn">Analyze Another Video</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>VideoInsights &copy; 2025 | Powered by Google AI Studio (Gemini)</p>
+        <div class="language-selector">
+            <label for="language">Language:</label>
+            <select id="language">
+                <option value="auto">Auto-detect</option>
+                <option value="en">English</option>
+                <option value="he">עברית (Hebrew)</option>
+                <option value="es">Español (Spanish)</option>
+                <option value="fr">Français (French)</option>
+                <option value="de">Deutsch (German)</option>
+                <option value="ru">Русский (Russian)</option>
+                <option value="ar">العربية (Arabic)</option>
+                <!-- More languages can be added -->
+            </select>
+        </div>
+    </footer>
+
+    <!-- Load environment configuration first -->
+    <script src="env.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

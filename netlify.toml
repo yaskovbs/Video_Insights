@@ -1,0 +1,43 @@
+# Netlify configuration file
+
+# Build settings
+[build]
+  # Directory (relative to root of your repo) that contains the deploy-ready 
+  # HTML files and assets generated when you build your project
+  publish = "."
+
+  # Specify that this is a static site, not a build process
+  command = "echo 'No build process required'"
+
+# Headers for better security and other settings
+[[headers]]
+  # Define which paths this specific [[headers]] block will cover
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    # Allow any site to access your published content
+    Access-Control-Allow-Origin = "*"
+
+# Redirects for SPA (Single Page Application)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  # This ensures that all paths will serve your index.html file (useful for SPAs)
+  # Only needed if you're building a true single-page app
+
+# Environment variable settings (for client-side/frontend configuration)
+[build.environment]
+  # Define environment variables here if needed
+  # These are build-time environment variables, not client-side
+  NODE_VERSION = "16" # Specify Node.js version
+
+# For Proxying to API (if needed in the future)
+# [[redirects]]
+#   from = "/api/*"  
+#   to = "https://your-api-url.com/:splat"
+#   status = 200
+#   force = true

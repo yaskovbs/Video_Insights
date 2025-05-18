@@ -1,0 +1,41 @@
+# Environment variables
+.env
+.env.local
+.env.development
+.env.production
+env.js
+
+# API Keys
+*.pem
+*.key
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+yarn.lock
+package-lock.json
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Build files
+dist/
+build/
+public/build/
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Server files with potentially large content
+server/uploads/*
+server/frames/*
