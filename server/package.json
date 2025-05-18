@@ -1,7 +1,8 @@
 {
   "name": "videoinsights-server",
   "version": "1.0.0",
-  "description": "Server-side processing for VideoInsights application",
+  "description": "Server-side processing for VideoInsights application - handles video uploads, YouTube video analysis, and Google AI API integration",
+  "_comment": "VideoInsights server package - Date: 2025-05-18",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

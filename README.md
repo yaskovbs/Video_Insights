@@ -1,3 +1,10 @@
+<!--
+ * VideoInsights - README.md
+ * Main documentation for the VideoInsights application
+ * Contains overview, features, setup instructions, and technical details
+ * Date: 2025-05-18
+ -->
+
 # VideoInsights
 
 ![VideoInsights Logo](https://path-to-your-logo/logo.png)

@@ -1,3 +1,10 @@
+<!--
+ * VideoInsights - NETLIFY_DEPLOYMENT.md
+ * הנחיות להעלאת אפליקציית VideoInsights לשרת Netlify
+ * כולל אפשרויות התמודדות עם צד השרת ופתרון בעיות נפוצות
+ * תאריך: 2025-05-18
+ -->
+
 # הוראות להעלאת VideoInsights ל-Netlify
 
 ## הכנת הפרויקט לפני העלאה

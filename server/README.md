@@ -1,3 +1,10 @@
+<!--
+ * VideoInsights - server/README.md
+ * Documentation for the VideoInsights server component
+ * Contains installation instructions, API endpoints, and usage information
+ * Date: 2025-05-18
+ -->
+
 # VideoInsights Server
 
 This is the server component for the VideoInsights application, providing advanced video processing capabilities that aren't possible in a browser-only environment.

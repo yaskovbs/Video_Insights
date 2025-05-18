@@ -1,4 +1,7 @@
-# Netlify configuration file
+# VideoInsights - netlify.toml
+# Netlify configuration file for VideoInsights application
+# Contains deployment settings, redirects, and environment variables
+# Date: 2025-05-18
 
 # Build settings
 [build]

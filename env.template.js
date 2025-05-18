@@ -1,3 +1,10 @@
+/*
+ * VideoInsights - env.template.js
+ * Environment variables template file for the VideoInsights application
+ * Contains configuration values for API endpoints and keys
+ * Date: 2025-05-18
+ */
+
 // IMPORTANT: Copy this file to env.js and add your API keys
 // env.js should not be committed to git (it's listed in .gitignore)
 

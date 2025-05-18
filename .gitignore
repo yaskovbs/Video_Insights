@@ -1,3 +1,8 @@
+# VideoInsights - .gitignore
+# Specifies intentionally untracked files to ignore when using Git
+# Prevents sensitive information and unnecessary files from being committed
+# Date: 2025-05-18
+
 # Environment variables
 .env
 .env.local

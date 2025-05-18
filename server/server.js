@@ -1,3 +1,10 @@
+/*
+ * VideoInsights - server.js
+ * Main server file for the VideoInsights backend API
+ * Handles video processing, frame extraction, and AI API integration
+ * Date: 2025-05-18
+ */
+
 const express = require('express');
 const multer = require('multer');
 const cors = require('cors');

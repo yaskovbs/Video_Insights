@@ -1,3 +1,10 @@
+/*
+ * VideoInsights - app.js
+ * Main JavaScript file for the VideoInsights web application
+ * Handles user interactions, API requests, video processing, and results display
+ * Date: 2025-05-18
+ */
+
 document.addEventListener('DOMContentLoaded', function() {
     // Theme handling
     const themeToggleBtn = document.getElementById('theme-toggle-btn');

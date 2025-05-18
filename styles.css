@@ -1,3 +1,10 @@
+/*
+ * VideoInsights - styles.css
+ * Main stylesheet for the VideoInsights web application
+ * Contains all styles for light and dark themes, responsive design, and UI components
+ * Date: 2025-05-18
+ */
+
 /* ----------------- Variables and Global Styles ----------------- */
 :root {
     /* Light Theme (default) */
